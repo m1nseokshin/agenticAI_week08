@@ -1,0 +1,8 @@
+node_modules
+dist
+.vercel
+.DS_Store
+# local agent skill installs
+.agents
+.claude
+skills-lock.json
