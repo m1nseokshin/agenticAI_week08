@@ -107,7 +107,7 @@ function CourseDetail({ course }: { course: Course }) {
             <VStack as="ul" gap="x2" style={{ margin: 0, padding: 0, listStyle: "none" }}>
               {goals.map((goal) => (
                 <HStack as="li" key={goal} gap="x2" align="flex-start">
-                  <Text textStyle="t4Bold" color="fg.brand">
+                  <Text textStyle="t4Bold" style={{ color: "var(--pnu-green)" }}>
                     ✓
                   </Text>
                   <Text textStyle="t4Regular">{goal}</Text>

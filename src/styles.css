@@ -1,3 +1,28 @@
+/* PNU brand colors, sampled from the official logo (pusan.ac.kr logo.png):
+   blue  #004298 (558 px), green #009246 (54 px). Tints are derived from the blue. */
+:root {
+  --pnu-blue: #004298;
+  --pnu-blue-pressed: #003478;
+  --pnu-blue-dark: #002a64;
+  --pnu-blue-tint-100: #e8eff9;
+  --pnu-blue-tint-200: #d0def2;
+  --pnu-blue-tint-300: #9db9e0;
+  --pnu-green: #009246;
+}
+
+/* Re-point SEED's brand tokens (carrot by default) at the PNU blue.
+   Specificity (0,3,0) beats SEED's :root[data-seed-color-mode] selectors. */
+:root[data-seed][data-seed-color-mode="light-only"] {
+  --seed-color-bg-brand-solid: var(--pnu-blue);
+  --seed-color-bg-brand-solid-pressed: var(--pnu-blue-pressed);
+  --seed-color-bg-brand-weak: var(--pnu-blue-tint-100);
+  --seed-color-bg-brand-weak-pressed: var(--pnu-blue-tint-200);
+  --seed-color-fg-brand: var(--pnu-blue);
+  --seed-color-fg-brand-contrast: var(--pnu-blue-dark);
+  --seed-color-stroke-brand-solid: var(--pnu-blue);
+  --seed-color-stroke-brand-weak: var(--pnu-blue-tint-300);
+}
+
 body {
   margin: 0;
   font-family: var(--seed-font-family);
